@@ -1,4 +1,5 @@
 {
+  "homepage" : "https://com-Abhijeet.github.io/Alpha-frontend",
   "name": "alpha-frontend",
   "private": true,
   "version": "0.0.0",
@@ -6,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "predeploy":"num run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
