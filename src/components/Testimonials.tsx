@@ -70,7 +70,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="./assets/img/testimonials/testimonials-1.jpg"
+                        src="/img/testimonials/testimonials-1.jpg"
                         className="testimonial-img"
                         alt="Saul Goodman"
                       />
@@ -90,7 +90,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="./assets/img/testimonials/testimonials-2.jpg"
+                        src="/img/testimonials/testimonials-2.jpg"
                         className="testimonial-img"
                         alt="Sara Wilsson"
                       />
@@ -110,7 +110,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="./assets/img/testimonials/testimonials-3.jpg"
+                        src="/img/testimonials/testimonials-3.jpg"
                         className="testimonial-img"
                         alt="Jena Karlis"
                       />
@@ -130,7 +130,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="./assets/img/testimonials/testimonials-4.jpg"
+                        src="/img/testimonials/testimonials-4.jpg"
                         className="testimonial-img"
                         alt="Matt Brandon"
                       />
@@ -150,7 +150,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="./assets/img/testimonials/testimonials-5.jpg"
+                        src="/img/testimonials/testimonials-5.jpg"
                         className="testimonial-img"
                         alt="John Larson"
                       />

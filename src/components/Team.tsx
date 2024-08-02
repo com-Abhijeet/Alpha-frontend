@@ -11,7 +11,7 @@ const Team = () => {
           <div className="row">
             <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div className="member">
-                <img src="./assets/img/team/team-1.jpg" alt="" />
+                <img src="/img/team/team-1.jpg" alt="" />
                 <h4>Shaji Nair</h4>
                 <span>Chief Executive Officer</span>
                 <p>
@@ -38,7 +38,7 @@ const Team = () => {
 
             <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div className="member">
-                <img src="./assets/img/team/team-2.jpg" alt="" />
+                <img src="/img/team/team-2.jpg" alt="" />
                 <h4>Ravi Kumar</h4>
                 <span>Product Manager</span>
                 <p>
@@ -64,7 +64,7 @@ const Team = () => {
 
             <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div className="member">
-                <img src="./assets/img/team/team-3.jpg" alt="" />
+                <img src="/img/team/team-3.jpg" alt="" />
                 <h4>Vikram Singh</h4>
                 <span>Chief Technical Officer</span>
                 <p>

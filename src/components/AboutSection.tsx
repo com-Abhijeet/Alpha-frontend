@@ -17,7 +17,7 @@ const AboutSection = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <img src="./assets/img/about.jpg" className="img-fluid" alt="" />
+              <img src="/img/about.jpg" className="img-fluid" alt="" />
             </div>
             <div className="col-lg-6 pt-4 pt-lg-0">
               <h3>About Us</h3>
