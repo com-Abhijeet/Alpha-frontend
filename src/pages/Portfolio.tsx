@@ -94,7 +94,7 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src=".\assets\img\portfolio\vmc.png"
+                    src="\img\portfolio\vmc.png"
                     className="img-fluid"
                     alt=""
                   />
