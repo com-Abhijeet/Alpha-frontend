@@ -20,6 +20,7 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
+      console.log(result);
       toast.success("Contact details successfully sent!");
       event.target.reset();
     } else {

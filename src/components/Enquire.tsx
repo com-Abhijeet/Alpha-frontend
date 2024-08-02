@@ -26,6 +26,7 @@ const Enquire :  React.FC<props> = ({productName}) => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
+      console.log(result);
       toast.success("Enquire details successfully sent!");
       event.target.reset();
     } else {

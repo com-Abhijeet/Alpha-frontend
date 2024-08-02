@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
