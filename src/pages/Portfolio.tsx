@@ -64,12 +64,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/sho-floor.png"
+                    src="././assets/img/portfolio/sho-floor.png"
                     className="img-fluid"
                     alt=""
                   />
                   <a
-                    href="Alpha-frontend/assets/img/portfolio/sho-floor.png"
+                    href="Alpha-frontend/./assets/img/portfolio/sho-floor.png"
                     data-gallery="portfolioGallery"
                     className="link-preview portfolio-lightbox"
                     title="Preview"
@@ -94,12 +94,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/vmc.png"
+                    src="./assets/img/portfolio/vmc.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/vmc.png"
+                    to="./assets/img/portfolio/vmc.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -137,12 +137,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-1.png"
+                    src="./assets/img/portfolio/product-1.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-1.png"
+                    to="./assets/img/portfolio/product-1.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -179,12 +179,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-2.png"
+                    src="./assets/img/portfolio/product-2.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-2.png"
+                    to="./assets/img/portfolio/product-2.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -219,12 +219,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-3.png"
+                    src="./assets/img/portfolio/product-3.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-3.png"
+                    to="./assets/img/portfolio/product-3.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -259,12 +259,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-4.png"
+                    src="./assets/img/portfolio/product-4.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-4.png"
+                    to="./assets/img/portfolio/product-4.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -299,12 +299,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-5.png"
+                    src="./assets/img/portfolio/product-5.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-5.png"
+                    to="./assets/img/portfolio/product-5.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -339,12 +339,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-6.png"
+                    src="./assets/img/portfolio/product-6.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-6.png"
+                    to="./assets/img/portfolio/product-6.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -379,12 +379,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-7.png"
+                    src="./assets/img/portfolio/product-7.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-7.png"
+                    to="./assets/img/portfolio/product-7.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -423,12 +423,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-8.png"
+                    src="./assets/img/portfolio/product-8.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-8.png"
+                    to="./assets/img/portfolio/product-8.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -463,12 +463,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-9.png"
+                    src="./assets/img/portfolio/product-9.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-9.png"
+                    to="./assets/img/portfolio/product-9.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -503,12 +503,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-10.png"
+                    src="./assets/img/portfolio/product-10.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-10.png"
+                    to="./assets/img/portfolio/product-10.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -543,12 +543,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/product-11.png"
+                    src="./assets/img/portfolio/product-11.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/product-11.png"
+                    to="./assets/img/portfolio/product-11.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -583,12 +583,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/Tech-supp-1.png"
+                    src="./assets/img/portfolio/Tech-supp-1.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/Tech-supp-1.png"
+                    to="./assets/img/portfolio/Tech-supp-1.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -623,12 +623,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/Tech-supp-2.png"
+                    src="./assets/img/portfolio/Tech-supp-2.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/Tech-supp-2.png"
+                    to="./assets/img/portfolio/Tech-supp-2.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -667,12 +667,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/Tech-supp-3.png"
+                    src="./assets/img/portfolio/Tech-supp-3.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/Tech-supp-3.png"
+                    to="./assets/img/portfolio/Tech-supp-3.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -711,12 +711,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/Tech-supp-4.png"
+                    src="./assets/img/portfolio/Tech-supp-4.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/Tech-supp-4.png"
+                    to="./assets/img/portfolio/Tech-supp-4.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -751,12 +751,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/Tech-supp-5.png"
+                    src="./assets/img/portfolio/Tech-supp-5.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/Tech-supp-5.png"
+                    to="./assets/img/portfolio/Tech-supp-5.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"
@@ -791,12 +791,12 @@ const Portfolio = () => {
               <div className="portfolio-wrap">
                 <figure>
                   <img
-                    src="assets/img/portfolio/Tech-supp-6.png"
+                    src="./assets/img/portfolio/Tech-supp-6.png"
                     className="img-fluid"
                     alt=""
                   />
                   <Link
-                    to="assets/img/portfolio/Tech-supp-6.png"
+                    to="./assets/img/portfolio/Tech-supp-6.png"
                     className="link-preview portfolio-lightbox"
                     data-gallery="portfolioGallery"
                     title="Preview"

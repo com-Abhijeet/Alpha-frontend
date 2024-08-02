@@ -1,11 +1,16 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/controller";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import {Autoplay, A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import {
+  Autoplay,
+  A11y,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
 
 const Testimonials = () => {
   return (
@@ -24,7 +29,7 @@ const Testimonials = () => {
             <div className="swiper-wrapper">
               <Swiper
                 // install Swiper modules
-                modules={[Autoplay,Navigation, Pagination, Scrollbar, A11y]}
+                modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={3}
                 autoplay={{
@@ -65,7 +70,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="assets/img/testimonials/testimonials-1.jpg"
+                        src="./assets/img/testimonials/testimonials-1.jpg"
                         className="testimonial-img"
                         alt="Saul Goodman"
                       />
@@ -85,7 +90,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="assets/img/testimonials/testimonials-2.jpg"
+                        src="./assets/img/testimonials/testimonials-2.jpg"
                         className="testimonial-img"
                         alt="Sara Wilsson"
                       />
@@ -105,7 +110,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="assets/img/testimonials/testimonials-3.jpg"
+                        src="./assets/img/testimonials/testimonials-3.jpg"
                         className="testimonial-img"
                         alt="Jena Karlis"
                       />
@@ -125,7 +130,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="assets/img/testimonials/testimonials-4.jpg"
+                        src="./assets/img/testimonials/testimonials-4.jpg"
                         className="testimonial-img"
                         alt="Matt Brandon"
                       />
@@ -145,7 +150,7 @@ const Testimonials = () => {
                         <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                       </p>
                       <img
-                        src="assets/img/testimonials/testimonials-5.jpg"
+                        src="./assets/img/testimonials/testimonials-5.jpg"
                         className="testimonial-img"
                         alt="John Larson"
                       />

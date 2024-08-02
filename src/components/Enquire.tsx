@@ -6,7 +6,7 @@ interface props {
   productName: string;
 }
 
-const Enquire :  React.FC<props> = ({productName}) => {
+const Enquire: React.FC<props> = ({ productName }) => {
   console.log(productName);
 
   const [result, setResult] = React.useState("");

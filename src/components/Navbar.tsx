@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="container-fluid d-flex justify-content-between align-items-center">
           <div className="navbar-brand logo d-flex align-items-center">
             <span>
-              <img src="assets/img/logo.png" alt="" className="img-fluid" />
+              <img src="./assets/img/logo.png" alt="" className="img-fluid" />
             </span>
             <h1 onClick={() => Navigate("/")}>Alpha</h1>
           </div>

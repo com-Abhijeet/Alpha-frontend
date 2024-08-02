@@ -1,5 +1,3 @@
-
-
 const Services = () => {
   return (
     <>
@@ -18,7 +16,7 @@ const Services = () => {
               <div className="icon-box">
                 <i className="bi bi-briefcase"></i>
                 <h4>
-                  <a >Precision Manufacturing</a>
+                  <a>Precision Manufacturing</a>
                 </h4>
                 <p>
                   We manufacture high-quality precision components for various
@@ -30,7 +28,7 @@ const Services = () => {
               <div className="icon-box">
                 <i className="bi bi-card-checklist"></i>
                 <h4>
-                  <a >Customization</a>
+                  <a>Customization</a>
                 </h4>
                 <p>
                   Our products can be tailored to meet the specific needs of our
@@ -42,7 +40,7 @@ const Services = () => {
               <div className="icon-box">
                 <i className="bi bi-bar-chart"></i>
                 <h4>
-                  <a >Job Work Supplier</a>
+                  <a>Job Work Supplier</a>
                 </h4>
                 <p>
                   We provide job work services with materials procured from
