@@ -57,7 +57,7 @@ const Clients = () => {
                 <SwiperSlide>
                   <div className="client-swiper-slide">
                     <img
-                      src="/img/clients/vesan-engineering-logo.png"
+                      src="/img/Clients/vesan-engineering-logo.png"
                       className="img-fluid"
                       alt=""
                     />
@@ -66,7 +66,7 @@ const Clients = () => {
                 <SwiperSlide>
                   <div className="client-swiper-slide">
                     <img
-                      src="/img/clients/jagdamba-hero.png"
+                      src="/img/Clients/Jagdamba-hero.png"
                       className="img-fluid"
                       alt=""
                     />
@@ -75,7 +75,7 @@ const Clients = () => {
                 <SwiperSlide>
                   <div className="client-swiper-slide">
                     <img
-                      src="/img/clients/mungiengineers-logo.jpeg"
+                      src="/img/Clients/mungiengineers-logo.jpeg"
                       className="img-fluid"
                       alt=""
                     />
@@ -84,7 +84,7 @@ const Clients = () => {
                 <SwiperSlide>
                   <div className="client-swiper-slide">
                     <img
-                      src="/img/clients/Western-heat.png"
+                      src="/img/Clients/Western-heat.png"
                       className="img-fluid"
                       alt=""
                     />
@@ -93,7 +93,7 @@ const Clients = () => {
                 <SwiperSlide>
                   <div className="client-swiper-slide">
                     <img
-                      src="/img/clients/ValveWorks-logo.webp"
+                      src="/img/Clients/ValveWorks-Logo.webp"
                       className="img-fluid"
                       alt=""
                     />
