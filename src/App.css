@@ -555,13 +555,55 @@ section {
 .services .icon-box:hover h4 a {
   color: #3498db;
 }
+/*--------------------------------------------------------------
+# Processess
+--------------------------------------------------------------*/
+.process-tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2%;
+  background-color: #f7fbfe;
+  border-radius: 4px;
+  /* box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); */
+}
+
+.process-tile {
+  display: grid;
+  width: calc(50% - 10px); /* Adjust the width to account for the gap */
+  margin: 5px;
+  background: #f7fbfe;
+  border-radius: 4px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px; /* Add padding if needed */
+}
+.process-tile h4{
+  justify-self: center;
+  font-size: 20px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .process-tile {
+    width: calc(100% - 10px); /* Full width for mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+}
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+#portfolio {
+  min-height: calc(150vh - 60px);
+  margin: 2% auto;
+  padding: 60px 0;
+}
 .portfolio {
   margin: 2% auto;
   padding: 60px 0;
+  overflow-y:auto;
+  -ms-overflow-style: none;
+  
 }
 
 .portfolio #portfolio-flters {
@@ -604,7 +646,6 @@ section {
 .portfolio .portfolio-wrap:hover {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
 }
-
 .portfolio .portfolio-item {
   position: relative;
   height: 360px;
@@ -612,12 +653,22 @@ section {
 }
 
 .portfolio .portfolio-item figure {
-  background: #000;
+  background: #ffffff;
   overflow: hidden;
   height: 240px;
   position: relative;
   border-radius: 4px 4px 0 0;
   margin: 0;
+  object-fit:contain ;
+}
+.img-fluid-portfolio {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .portfolio .portfolio-item figure:hover img {
@@ -636,7 +687,7 @@ section {
   text-align: center;
   width: 36px;
   height: 36px;
-  background: #fff;
+  background: #171717;
   border-radius: 50%;
   transition: all 0.2s linear;
   overflow: hidden;
@@ -645,7 +696,7 @@ section {
 
 .portfolio .portfolio-item figure .link-preview i,
 .portfolio .portfolio-item figure .link-details i {
-  color: #384046;
+  color: #fefefe;
   line-height: 0;
 }
 
@@ -1137,6 +1188,9 @@ section {
   color: #444444;
   font-size: 14px;
   background: #f7fbfe;
+  position:relative;
+  bottom: 0;
+  width: 100%;
 }
 
 #footer .footer-top {

@@ -1,5 +1,3 @@
-
-
 const WhatWeDo = () => {
   return (
     <>
@@ -17,7 +15,7 @@ const WhatWeDo = () => {
             <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div className="icon-box">
                 <div className="icon">
-                  <i className="bx bxl-dribbble"></i>
+                  <i className="bi bi-dribbble"></i>
                 </div>
                 <h4>
                   <a>Manufacturing</a>
@@ -32,7 +30,7 @@ const WhatWeDo = () => {
             <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
               <div className="icon-box">
                 <div className="icon">
-                  <i className="bx bx-file"></i>
+                  <i className="bi bi-gear"></i>
                 </div>
                 <h4>
                   <a>Customization</a>
@@ -47,7 +45,7 @@ const WhatWeDo = () => {
             <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
               <div className="icon-box">
                 <div className="icon">
-                  <i className="bx bx-tachometer"></i>
+                  <i className="bi bi-people"></i>
                 </div>
                 <h4>
                   <a>Job Work Supplier</a>
