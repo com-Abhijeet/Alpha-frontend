@@ -21,30 +21,30 @@ const Portfolio: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (portfolioRef.current) {
-        const { scrollTop, scrollHeight, clientHeight } = portfolioRef.current;
-        if (scrollTop + clientHeight >= scrollHeight) {
-          document.body.classList.add("stuck");
-          setTimeout(() => {
-            document.body.classList.remove("stuck");
-          }, 1000); // Adjust the duration as needed
-        }
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (portfolioRef.current) {
+  //       const { scrollTop, scrollHeight, clientHeight } = portfolioRef.current;
+  //       if (scrollTop + clientHeight >= scrollHeight) {
+  //         document.body.classList.add("stuck");
+  //         setTimeout(() => {
+  //           document.body.classList.remove("stuck");
+  //         }, 1000); // Adjust the duration as needed
+  //       }
+  //     }
+  //   };
 
-    const portfolioElement = portfolioRef.current;
-    if (portfolioElement) {
-      portfolioElement.addEventListener("scroll", handleScroll);
-    }
+  //   const portfolioElement = portfolioRef.current;
+  //   if (portfolioElement) {
+  //     portfolioElement.addEventListener("scroll", handleScroll);
+  //   }
 
-    return () => {
-      if (portfolioElement) {
-        portfolioElement.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [portfolioRef]);
+  //   return () => {
+  //     if (portfolioElement) {
+  //       portfolioElement.removeEventListener("scroll", handleScroll);
+  //     }
+  //   };
+  // }, [portfolioRef]);
 
   const handleMoreDetailsClick = (name: string) => {
     setProductName(name);
