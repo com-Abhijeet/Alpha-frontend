@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <>
@@ -46,42 +45,14 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="col-lg-3 col-md-6 footer-links">
-                <h4>Our Services</h4>
-                <ul>
-                  <li>
-                    <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Precision Components Manufacturing</a>
-                  </li>
-                  <li>
-                    <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Automotive Parts</a>
-                  </li>
-                  <li>
-                    <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Oil & Gas Components</a>
-                  </li>
-                  <li>
-                    <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Hydraulic Systems</a>
-                  </li>
-                  <li>
-                    <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Customization Services</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-lg-4 col-md-6 footer-newsletter">
-                <h4>Join Our Newsletter</h4>
-                <p>
-                  Stay updated with the latest news and updates from Alpha
-                  Enterprises.
-                </p>
-                <form action="" method="post">
-                  <input type="email" name="email" />
-                  <input type="submit" value="Subscribe" />
-                </form>
+              <div className="col-lg-7 col-md-12 map-frame">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.1237809021964!2d73.78750927523909!3d18.613501482498197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9fbee1660e9%3A0x8110cdda72a76b32!2sAlpha%20Enterprises!5e0!3m2!1sen!2sin!4v1723380751541!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  allowFullScreen={true}
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>

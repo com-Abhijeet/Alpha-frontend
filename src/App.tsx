@@ -10,7 +10,7 @@ import Landing from "./pages/Landing";
 import useMuteMedia from "./helpers/useMuteMedia";
 
 // Lazy load the Portfolio component
-const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Portfolio = lazy(() => import("./components/Portfolio"));
 
 function App() {
   useMuteMedia();

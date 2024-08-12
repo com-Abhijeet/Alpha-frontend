@@ -8,6 +8,7 @@ import Team from "../components/Team";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Clients from "../components/Clients";
+import Portfolio from "../components/Portfolio";
 
 const Landing = () => {
   return (
@@ -17,6 +18,7 @@ const Landing = () => {
       <WhatWeDo />
       <AboutSection />
       <Services />
+      <Portfolio />
       <Clients />
       <Testimonials />
       <Team />

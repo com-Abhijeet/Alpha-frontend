@@ -12,61 +12,61 @@ const Process = () => {
   } = {
     video1: {
       id: 1,
-      imgSrc: "video/process-video1.MOV",
+      imgSrc: "video/process-video1.mp4",
       title: "Process 1",
       type: "video",
     },
     video2: {
       id: 2,
-      imgSrc: "video/process-video2.MOV",
+      imgSrc: "video/process-video2.mp4",
       title: "Process 2",
       type: "video",
     },
     video3: {
       id: 3,
-      imgSrc: "video/process-video3.MOV",
+      imgSrc: "video/process-video3.mp4",
       title: "Process 3",
       type: "video",
     },
     video4: {
       id: 4,
-      imgSrc: "video/process-video4.MOV",
+      imgSrc: "video/process-video4.mp4",
       title: "Process 4",
       type: "video",
     },
     video5: {
       id: 5,
-      imgSrc: "video/process-video5.MOV",
+      imgSrc: "video/process-video5.mp4",
       title: "Process 5",
       type: "video",
     },
     video6: {
       id: 6,
-      imgSrc: "video/process-video6.MOV",
+      imgSrc: "video/process-video6.mp4",
       title: "Process 6",
       type: "video",
     },
     video7: {
       id: 7,
-      imgSrc: "video/process-video7.MOV",
+      imgSrc: "video/process-video7.mp4",
       title: "Process 7",
       type: "video",
     },
     video8: {
       id: 8,
-      imgSrc: "video/process-video8.MOV",
+      imgSrc: "video/process-video8.mp4",
       title: "Process 8",
       type: "video",
     },
     video9: {
       id: 9,
-      imgSrc: "video/process-video9.MOV",
+      imgSrc: "video/process-video9.mp4",
       title: "Process 9",
       type: "video",
     },
     video10: {
       id: 10,
-      imgSrc: "video/process-video10.MOV",
+      imgSrc: "video/process-video10.mp4",
       title: "Process 10",
       type: "video",
     },
@@ -96,10 +96,11 @@ const Process = () => {
                     playing={true}
                     controls={true}
                     width={"100%"}
-                    type="video/mov"
+                    type="video/mp4"
                     stopOnUnmount={true}
                     volume={0}
                     loop={true}
+                    light="thumbnail.png"
                   />
                 )}
               </div>

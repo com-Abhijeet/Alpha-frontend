@@ -52,7 +52,7 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink className="nav-link" to="/portfolio">
+                <HashLink className="nav-link" to="/#portfolio">
                   Portfolio
                 </HashLink>
               </li>
@@ -70,16 +70,16 @@ const Navbar = () => {
           </div>
         </div>
         <div className="header-social-links d-flex align-items-center">
-          <a href="#" className="twitter">
+          <a href="#" className="twitter" title="Twitter">
             <i className="bi bi-twitter"></i>
           </a>
-          <a href="#" className="facebook">
+          <a href="#" className="facebook" title="Facebook">
             <i className="bi bi-facebook"></i>
           </a>
-          <a href="#" className="instagram">
+          <a href="#" className="instagram" title="Instagram">
             <i className="bi bi-instagram"></i>
           </a>
-          <a href="#" className="linkedin">
+          <a href="#" className="linkedin" title="Linkedin">
             <i className="bi bi-linkedin"></i>
           </a>
         </div>
