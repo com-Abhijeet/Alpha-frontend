@@ -1,9 +1,11 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useAnalyticsEventTracker from '../middleware/useAnalyticsEventTracker';
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
+  const gaEventTracker = useAnalyticsEventTracker('Contact us');
   const onSubmit = async (event: any) => {
     event.preventDefault();
     setResult("Sending....");
@@ -22,10 +24,13 @@ const Contact = () => {
       setResult("Form Submitted Successfully");
       console.log(result);
       toast.success("Contact details successfully sent!");
+      gaEventTracker('form_submit_success');
       event.target.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
+      gaEventTracker('form_submit_failed');
+      event.target.reset();
     }
   };
   return (
@@ -121,7 +126,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <button type="submit">Send Message</button>
+                  <button type="submit" onClick={() => gaEventTracker('form_submit_attempt')}>Send Message</button>
                 </div>
               </form>
             </div>

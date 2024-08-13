@@ -4,6 +4,9 @@ import Enquire from "./Enquire";
 import Process from "./Process";
 
 const Portfolio: React.FC = () => {
+  /*
+  STATE VARIABLES
+  */
   const [activeFilter, setActiveFilter] = useState("*");
   const [filteredItems, setFilteredItems] = useState<
     { id: number; imgSrc: string; title: string; type: string }[]
@@ -12,6 +15,10 @@ const Portfolio: React.FC = () => {
   const [productName, setProductName] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const portfolioRef = useRef<HTMLDivElement>(null);
+
+  /*
+  Handle Responsiveness
+  */
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -44,6 +51,9 @@ const Portfolio: React.FC = () => {
     };
   }, [portfolioRef]);
 
+  /*
+  Enquiry Details Event 
+  */
   const handleMoreDetailsClick = (name: string) => {
     setProductName(name);
     setShowEnquire(true);
@@ -52,7 +62,9 @@ const Portfolio: React.FC = () => {
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
   };
-
+  /*
+  Portfolio Object Array
+  */
   const portfolioData: {
     [key: string]: {
       id: number;

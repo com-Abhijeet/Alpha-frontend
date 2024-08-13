@@ -681,6 +681,10 @@ section {
 .portfolio .portfolio-item figure:hover img {
   opacity: 0.4;
   transition: 0.4s;
+  /* position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(300%); */
 }
 
 .portfolio .portfolio-item figure .link-preview,
