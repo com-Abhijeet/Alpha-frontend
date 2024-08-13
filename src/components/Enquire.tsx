@@ -2,6 +2,18 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import ReactGA from "react-ga4";
+
+const subtle = crypto.subtle;
+
+const hashSensitiveUserData = async (value: string) => {
+  const encoder = new TextEncoder();
+  const value_utf8 = encoder.encode(value);
+  const hash_sha256 = await subtle.digest("SHA-256", value_utf8);
+  const hash_array = Array.from(new Uint8Array(hash_sha256));
+  return hash_array.map((b) => b.toString(16).padStart(2, "0")).join("");
+};
+
 interface props {
   productName: string;
 }
@@ -28,6 +40,30 @@ const Enquire: React.FC<props> = ({ productName }) => {
       setResult("Form Submitted Successfully");
       console.log(result);
       toast.success("Enquire details successfully sent!");
+
+      const hashedEmail = hashSensitiveUserData(
+        formData.get("email") as string
+      );
+      const name = formData.get("name") as string;
+      const message = formData.get("message") as string;
+
+      ReactGA.event({
+        category: "Form",
+        action: "Contact-Form-Submit",
+        label: `email: ${hashedEmail}, name: ${name}`,
+      });
+      const contactDetails: {
+        userEmail: string;
+        userName: string;
+        message: string;
+      } = {
+        userEmail: `${hashedEmail}`,
+        userName: `${name}`,
+        message: `${message}`,
+      };
+      ReactGA.set({
+        contactDetails,
+      });
       event.target.reset();
     } else {
       console.log("Error", data);

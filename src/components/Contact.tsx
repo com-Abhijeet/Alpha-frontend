@@ -4,13 +4,16 @@ import "react-toastify/dist/ReactToastify.css";
 import useAnalyticsEventTracker from "../middleware/useAnalyticsEventTracker";
 
 import ReactGA from "react-ga4";
-// const hashSensitiveUserData = async (value: string) => {
-//   const encoder = new TextEncoder();
-//   const value_utf8 = encoder.encode(value);
-//   const hash_sha256 = await subtle.digest("SHA-256", value_utf8);
-//   const hash_array = Array.from(new Uint8Array(hash_sha256));
-//   return hash_array.map((b) => b.toString(16).padStart(2, "0")).join("");
-// };
+
+const subtle = crypto.subtle;
+
+const hashSensitiveUserData = async (value: string) => {
+  const encoder = new TextEncoder();
+  const value_utf8 = encoder.encode(value);
+  const hash_sha256 = await subtle.digest("SHA-256", value_utf8);
+  const hash_array = Array.from(new Uint8Array(hash_sha256));
+  return hash_array.map((b) => b.toString(16).padStart(2, "0")).join("");
+};
 
 const Contact: React.FC = () => {
   const [result, setResult] = React.useState("");
@@ -33,7 +36,7 @@ const Contact: React.FC = () => {
       console.log(result);
       toast.success("Contact details successfully sent!");
 
-      const hashedEmail = formData.get("email") as string;
+      const hashedEmail = hashSensitiveUserData(formData.get("email") as string); 
       const name = formData.get("name") as string;
       const message = formData.get("message") as string;
   
@@ -56,7 +59,6 @@ const Contact: React.FC = () => {
       ReactGA.set({
         contactDetails
       });
-      ReactGA.send(contactDetails);
       event.target.reset();
     } else {
       console.log("Error", data);
