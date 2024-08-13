@@ -1,13 +1,13 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import useAnalyticsEventTracker from '../middleware/useAnalyticsEventTracker';
+import useAnalyticsEventTracker from "../middleware/useAnalyticsEventTracker";
 
-import ReactGA from 'react-ga4';
+import ReactGA from "react-ga4";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
-  const gaEventTracker = useAnalyticsEventTracker('Contact us');
+  const gaEventTracker = useAnalyticsEventTracker("Contact us");
 
   const onSubmit = async (event: any) => {
     event.preventDefault();
@@ -27,16 +27,15 @@ const Contact = () => {
       toast.success("Contact details successfully sent!");
 
       ReactGA.event({
-        category: 'Form',
-        action: 'Submit',
-        label: 'Contact form submitted successfully'
+        category: "Form",
+        action: "Contact-Form-Submit",
+        label: "Contact form submitted successfully",
       });
-
+      event.target.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
-      gaEventTracker('form_submit_failed');
-
+      gaEventTracker("form_submit_failed");
     }
   };
   return (
