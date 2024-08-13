@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
       console.log(result);
       toast.success("Contact details successfully sent!");
 
-      const hashedEmail = hashSensitiveUserData(formData.get("email") as string); 
+      const hashedEmail = await hashSensitiveUserData(formData.get("email") as string); 
       const name = formData.get("name") as string;
       const message = formData.get("message") as string;
   
