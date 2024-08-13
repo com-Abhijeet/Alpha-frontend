@@ -3,34 +3,40 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAnalyticsEventTracker from '../middleware/useAnalyticsEventTracker';
 
+import ReactGA from 'react-ga4';
+
 const Contact = () => {
   const [result, setResult] = React.useState("");
   const gaEventTracker = useAnalyticsEventTracker('Contact us');
+
   const onSubmit = async (event: any) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
 
     formData.append("access_key", "f903b31d-c584-47b0-8f37-2c317bd8e34f");
-
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });
-
     const data = await response.json();
 
     if (data.success) {
       setResult("Form Submitted Successfully");
       console.log(result);
       toast.success("Contact details successfully sent!");
-      gaEventTracker('form_submit_success');
-      event.target.reset();
+
+      ReactGA.event({
+        category: 'Form',
+        action: 'Submit',
+        label: 'Contact form submitted successfully'
+      });
+
     } else {
       console.log("Error", data);
       setResult(data.message);
       gaEventTracker('form_submit_failed');
-      event.target.reset();
+
     }
   };
   return (
