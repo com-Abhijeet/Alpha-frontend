@@ -15,7 +15,7 @@ const hashSensitiveUserData = async (value: string) => {
   return hash_array.map((b) => b.toString(16).padStart(2, "0")).join("");
 };
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const [result, setResult] = React.useState("");
   const gaEventTracker = useAnalyticsEventTracker("Contact us");
 
@@ -40,12 +40,11 @@ const Contact = () => {
         formData.get("email") as string
       );
       const name = formData.get("name") as string;
-      const phone = formData.get("phone") as string;
 
       ReactGA.event({
         category: "Form",
         action: "Contact-Form-Submit",
-        label: `Contact form submitted successfully with email: ${hashedEmail}, name: ${name}, phone: ${phone}`,
+        label: `Contact form submitted successfully with email: ${hashedEmail}, name: ${name}`,
       });
       event.target.reset();
     } else {
