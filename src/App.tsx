@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,6 +18,11 @@ const Portfolio = lazy(() => import("./components/Portfolio"));
 
 function App() {
   useMuteMedia();
+  useEffect(() => {
+    // Track page view
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+  
   return (
     <>
       <Router>

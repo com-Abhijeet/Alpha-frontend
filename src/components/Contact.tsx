@@ -127,7 +127,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <button type="submit" onClick={() => gaEventTracker('form_submit_attempt')}>Send Message</button>
+                  <button type="submit">Send Message</button>
                 </div>
               </form>
             </div>
