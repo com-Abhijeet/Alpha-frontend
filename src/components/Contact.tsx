@@ -116,6 +116,7 @@ const Contact = () => {
                     rows={5}
                     placeholder="Message"
                     required
+                    maxLength={256}
                   ></textarea>
                 </div>
                 <div className="my-3">
