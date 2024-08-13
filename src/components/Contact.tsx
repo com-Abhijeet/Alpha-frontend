@@ -4,16 +4,13 @@ import "react-toastify/dist/ReactToastify.css";
 import useAnalyticsEventTracker from "../middleware/useAnalyticsEventTracker";
 
 import ReactGA from "react-ga4";
-
-const { subtle } = window.crypto;
-
-const hashSensitiveUserData = async (value: string) => {
-  const encoder = new TextEncoder();
-  const value_utf8 = encoder.encode(value);
-  const hash_sha256 = await subtle.digest("SHA-256", value_utf8);
-  const hash_array = Array.from(new Uint8Array(hash_sha256));
-  return hash_array.map((b) => b.toString(16).padStart(2, "0")).join("");
-};
+// const hashSensitiveUserData = async (value: string) => {
+//   const encoder = new TextEncoder();
+//   const value_utf8 = encoder.encode(value);
+//   const hash_sha256 = await subtle.digest("SHA-256", value_utf8);
+//   const hash_array = Array.from(new Uint8Array(hash_sha256));
+//   return hash_array.map((b) => b.toString(16).padStart(2, "0")).join("");
+// };
 
 const Contact: React.FC = () => {
   const [result, setResult] = React.useState("");
@@ -36,16 +33,30 @@ const Contact: React.FC = () => {
       console.log(result);
       toast.success("Contact details successfully sent!");
 
-      const hashedEmail = await hashSensitiveUserData(
-        formData.get("email") as string
-      );
+      const hashedEmail = formData.get("email") as string;
       const name = formData.get("name") as string;
+      const message = formData.get("message") as string;
+  
 
       ReactGA.event({
         category: "Form",
         action: "Contact-Form-Submit",
-        label: `Contact form submitted successfully with email: ${hashedEmail}, name: ${name}`,
+        label: `email: ${hashedEmail}, name: ${name}`,
+
       });
+      const contactDetails: {
+        userEmail: string,
+        userName: string,
+        message: string
+      } = {
+        userEmail: `${hashedEmail}`,
+        userName: `${name}`,
+        message: `${message}`
+      };
+      ReactGA.set({
+        contactDetails
+      });
+      ReactGA.send(contactDetails);
       event.target.reset();
     } else {
       console.log("Error", data);
