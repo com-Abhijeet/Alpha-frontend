@@ -61,8 +61,10 @@ const Enquire: React.FC<props> = ({ productName }) => {
         userName: `${name}`,
         message: `${message}`,
       };
-      ReactGA.set({
-        contactDetails,
+      ReactGA.event({
+        category: "Enquiry Form ",
+        action: "Enquiry-Form-Submit",
+        label: JSON.stringify(contactDetails),
       });
       event.target.reset();
     } else {
