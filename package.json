@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/model-viewer": "^3.5.0",
     "@react-spring/web": "^9.7.4",
     "alpha-frontend": "file:",
     "bootstrap": "^5.3.3",
@@ -27,7 +28,8 @@
     "react-router-dom": "^6.25.1",
     "react-router-hash-link": "^2.4.3",
     "react-toastify": "^10.0.5",
-    "swiper": "^11.1.9"
+    "swiper": "^11.1.9",
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

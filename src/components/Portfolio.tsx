@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
+import ReactGA from "react-ga4"
 import { Link } from "react-router-dom";
 import Enquire from "./Enquire";
 import Process from "./Process";
@@ -57,6 +58,13 @@ const Portfolio: React.FC = () => {
   const handleMoreDetailsClick = (name: string) => {
     setProductName(name);
     setShowEnquire(true);
+
+    ReactGA.event({
+      action: `Enquire for ${productName}`,
+      category: 'Enquiry',
+      label: `${productName}`,
+      value: 1
+    })
   };
 
   const handleFilterClick = (filter: string) => {
