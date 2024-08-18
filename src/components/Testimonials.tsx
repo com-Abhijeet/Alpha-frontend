@@ -55,8 +55,8 @@ const Testimonials = () => {
                 }}
                 // navigation
                 pagination={{ clickable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log("slide change")}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log("slide change")}
               >
                 <SwiperSlide>
                   <div className="swiper-slide">

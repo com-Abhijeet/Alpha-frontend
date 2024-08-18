@@ -1,10 +1,6 @@
-
 # Alpha Enterprises
 
 Alpha Enterprises is a custom made website for Alpha Enterprises PVT LTD by PSPM Technologies.
-
-
-
 
 ## Installation
 
@@ -15,7 +11,9 @@ Install Alpha-Enterprises with npm
   npm Install
   npm run dev
 ```
+
 **Connecting_to_web3_forms**
+
 ```bash
 >Go to web3forms ("https://web3forms.com/")
 >GET YOUR ACCESS KEY by Registering Email ( You will recieve all emails from web on this )
@@ -24,7 +22,13 @@ Install Alpha-Enterprises with npm
 >formData.append("access_key", "YOUR_ACCESS_KEY");
 >Done with installation
 ```
-    
+
+**Connecting_to_LYRO (TIDIO CHATBOT)**
+
+> Register to tido
+> update the Script:SRC in landing page
+> ALL DONE!
+
 ## Tech Stack
 
 **Client:** React, React-DOM, Swiper, Bootstrap
@@ -32,5 +36,3 @@ Install Alpha-Enterprises with npm
 **Server:** Node,
 
 **Email-Webservice:** web3 Forms ,
-
-

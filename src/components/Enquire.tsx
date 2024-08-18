@@ -19,7 +19,7 @@ interface props {
 }
 
 const Enquire: React.FC<props> = ({ productName }) => {
-  console.log(productName);
+  // console.log(productName);
 
   const [result, setResult] = React.useState("");
   const onSubmit = async (event: any) => {
@@ -27,7 +27,7 @@ const Enquire: React.FC<props> = ({ productName }) => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "f903b31d-c584-47b0-8f37-2c317bd8e34f");
+    formData.append("access_key", "1439fddb-41f9-486c-a3e0-0203a9adcd6b");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -37,9 +37,9 @@ const Enquire: React.FC<props> = ({ productName }) => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
-      console.log(result);
-      toast.success("Enquire details successfully sent!");
+      setResult("Eqnuiry Details sent Successfully");
+      // console.log(result);
+      toast.success(result);
 
       const hashedEmail = hashSensitiveUserData(
         formData.get("email") as string
@@ -68,7 +68,7 @@ const Enquire: React.FC<props> = ({ productName }) => {
       });
       event.target.reset();
     } else {
-      console.log("Error", data);
+      // console.log("Error", data);
       setResult(data.message);
     }
   };
@@ -129,14 +129,24 @@ const Enquire: React.FC<props> = ({ productName }) => {
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
                     <input
-                      type="email"
+                      type="text"
                       className="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
+                      name="Phone No"
+                      id="contactNo"
+                      placeholder="Your Contact No"
                       required
                     />
                   </div>
+                </div>
+                <div className="form-group mt-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
                 </div>
                 <div className="form-group mt-3">
                   <input

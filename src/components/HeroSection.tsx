@@ -1,5 +1,3 @@
-
-
 const HeroSection = () => {
   return (
     <>
@@ -15,7 +13,9 @@ const HeroSection = () => {
             We are Manufacturer and Service Provider for high Quality Precision
             Components
           </h2>
-          <a className="btn-get-started scrollto">Get Started</a>
+          <a href="/#what-we-do" className="btn-get-started scrollto">
+            Get Started
+          </a>
         </div>
       </section>
     </>

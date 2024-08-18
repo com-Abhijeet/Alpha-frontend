@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.css";
 import useAnalyticsEventTracker from "../middleware/useAnalyticsEventTracker";
 
 import ReactGA from "react-ga4";
-
 const subtle = crypto.subtle;
 
 const hashSensitiveUserData = async (value: string) => {
@@ -24,7 +23,7 @@ const Contact: React.FC = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "f903b31d-c584-47b0-8f37-2c317bd8e34f");
+    formData.append("access_key", "1439fddb-41f9-486c-a3e0-0203a9adcd6b");
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
@@ -32,33 +31,34 @@ const Contact: React.FC = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Contact Details Sent Successfully");
       console.log(result);
-      toast.success("Contact details successfully sent!");
+      toast.success("Contact details sent successfully");
 
-      const hashedEmail = await hashSensitiveUserData(formData.get("email") as string); 
+      // GOOGLE ANALYTICS
+      const hashedEmail = await hashSensitiveUserData(
+        formData.get("email") as string
+      );
       const name = formData.get("name") as string;
       const message = formData.get("message") as string;
-  
-
       ReactGA.event({
         category: "Form",
         action: "Contact-Form-Submit",
         label: `email: ${hashedEmail}, name: ${name}`,
-
       });
       const contactDetails: {
-        userEmail: string,
-        userName: string,
-        message: string
+        userEmail: string;
+        userName: string;
+        message: string;
       } = {
         userEmail: `${hashedEmail}`,
         userName: `${name}`,
-        message: `${message}`
+        message: `${message}`,
       };
       ReactGA.set({
-        contactDetails
+        contactDetails,
       });
+
       event.target.reset();
     } else {
       console.log("Error", data);
@@ -123,15 +123,26 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
                     <input
-                      type="email"
+                      type="text"
                       className="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
+                      name="phone-No"
+                      id="contactNo"
+                      placeholder="Your Contact No"
                       required
                     />
                   </div>
                 </div>
+                <div className="form-group mt-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+
                 <div className="form-group mt-3">
                   <input
                     type="text"
