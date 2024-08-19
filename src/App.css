@@ -573,13 +573,14 @@ section {
   width: 80%;
   margin: 0 auto;
   padding: 5%;
-
+  text-align: center;
 }
 
 .process-tile h4 {
   justify-self: center;
   font-size: 20px;
   align-items: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .process-video-player {
