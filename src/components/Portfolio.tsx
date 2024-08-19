@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import ReactGA from "react-ga4"
+import ReactGA from "react-ga4";
 import { Link } from "react-router-dom";
 import Enquire from "./Enquire";
 import Process from "./Process";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Portfolio: React.FC = () => {
   /*
@@ -61,10 +62,10 @@ const Portfolio: React.FC = () => {
 
     ReactGA.event({
       action: `Enquire for ${productName}`,
-      category: 'Enquiry',
+      category: "Enquiry",
       label: `${productName}`,
-      value: 1
-    })
+      value: 1,
+    });
   };
 
   const handleFilterClick = (filter: string) => {
@@ -371,8 +372,15 @@ const Portfolio: React.FC = () => {
             </div>
           </div>
         </section>
-        <Process />
-
+        <ScrollAnimation
+          animateIn="slideInUp"
+          duration={1}
+          animateOnce
+          animateOut="slideOutUp"
+        >
+          {""}
+          <Process />
+        </ScrollAnimation>
         {isMobile && showEnquire && <Enquire productName={productName} />}
         {showEnquire && !isMobile && (
           <div className="enquire-overlay">

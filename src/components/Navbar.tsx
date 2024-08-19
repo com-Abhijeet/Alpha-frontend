@@ -57,11 +57,6 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink className="nav-link" to="/#testimonials">
-                  Testimonials
-                </HashLink>
-              </li>
-              <li className="nav-item">
                 <HashLink className="nav-link" to="/#contact">
                   Contact
                 </HashLink>

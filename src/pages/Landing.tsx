@@ -1,15 +1,14 @@
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import WhatWeDo from "../components/WhatWeDo";
 import AboutSection from "../components/AboutSection";
 import Services from "../components/Services";
-// import Testimonials from "../components/Testimonials";
-// import Team from "../components/Team";
+import Portfolio from "../components/Portfolio";
+import Clients from "../components/Clients";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Clients from "../components/Clients";
-import Portfolio from "../components/Portfolio";
-import { useEffect } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Landing = () => {
   useEffect(() => {
@@ -22,18 +21,54 @@ const Landing = () => {
       document.body.removeChild(script);
     };
   }, []);
+
   return (
     <>
       <Navbar />
       <HeroSection />
       <WhatWeDo />
-      <AboutSection />
-      <Services />
+
+      <ScrollAnimation
+        animateIn="slideInUp"
+        duration={1}
+        animateOnce
+        animateOut="slideOutUp"
+      >
+        {" "}
+        <AboutSection />
+      </ScrollAnimation>
+
+      <ScrollAnimation
+        animateIn="slideInUp"
+        duration={1}
+        animateOnce
+        animateOut="slideOutUp"
+      >
+        {" "}
+        <Services />
+      </ScrollAnimation>
+
       <Portfolio />
-      <Clients />
-      {/* <Testimonials /> */}
-      {/* <Team /> */}
-      <Contact />
+
+      <ScrollAnimation
+        animateIn="slideInUp"
+        duration={1}
+        animateOnce
+        animateOut="slideOutUp"
+      >
+        {" "}
+        <Clients />
+      </ScrollAnimation>
+
+      <ScrollAnimation
+        animateIn="slideInUp"
+        duration={1}
+        animateOnce
+        animateOut="slideOutUp"
+      >
+        {" "}
+        <Contact />
+      </ScrollAnimation>
       <Footer />
     </>
   );

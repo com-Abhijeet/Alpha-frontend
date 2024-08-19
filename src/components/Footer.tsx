@@ -8,14 +8,14 @@ const Footer = () => {
               <div className="col-lg-3 col-md-6 footer-contact">
                 <h3>Alpha Enterprises</h3>
                 <p>
-                  Gat No. 86, Plot No. 5 <br />
+                  Gate No. 86, Plot No. 5 <br />
                   Jyotibanagar, Talewade, Pune 411062
                   <br />
                   India <br />
                   <br />
                   <strong>Phone:</strong> +91 9307406188
                   <br />
-                  <strong>Email:</strong> alphashaji@gmail.com
+                  <strong>Email:</strong> support@alphaenterprisess.com
                   <br />
                 </p>
               </div>
@@ -28,19 +28,15 @@ const Footer = () => {
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">About us</a>
+                    <a href="#about">About us</a>
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Services</a>
+                    <a href="#services">Services</a>
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Terms of service</a>
-                  </li>
-                  <li>
-                    <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Privacy policy</a>
+                    <a href="#contact">Contact</a>
                   </li>
                 </ul>
               </div>

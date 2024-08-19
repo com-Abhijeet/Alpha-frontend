@@ -1,6 +1,21 @@
 import ReactPlayer from "react-player";
 import useLazyLoadVideo from "../helpers/useLazyLoadVideo";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/controller";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import {
+  Autoplay,
+  A11y,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
+import { useRef } from "react";
+
 const Process = () => {
   const videos: {
     [key: string]: {
@@ -71,6 +86,14 @@ const Process = () => {
       type: "video",
     },
   };
+  const playerRefs = useRef<{ [key: string]: ReactPlayer | null }>({});
+  const handleSlideChange = () => {
+    Object.values(playerRefs.current).forEach((player) => {
+      if (player && player.getInternalPlayer) {
+        player.getInternalPlayer().pause();
+      }
+    });
+  };
 
   return (
     <section id="process" className="process section-bg">
@@ -82,30 +105,39 @@ const Process = () => {
             processess
           </p>
         </div>
-        <div className="process-tiles">
-          {Object.values(videos).map((video) => {
-            const { videoRef, isIntersecting } = useLazyLoadVideo();
+        <div className="process-swiper">
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            onSlideChange={handleSlideChange}
+            loop={true}
+          >
+            {Object.values(videos).map((video) => {
+              const { videoRef, isIntersecting } = useLazyLoadVideo();
 
-            return (
-              <div className="process-tile" key={video.id} ref={videoRef}>
-                <h4>{video.title}</h4>
-                {isIntersecting && (
-                  <ReactPlayer
-                    className="process-video-player"
-                    url={`${video.imgSrc}`}
-                    playing={true}
-                    controls={true}
-                    width={"100%"}
-                    type="video/mp4"
-                    stopOnUnmount={true}
-                    volume={0}
-                    loop={true}
-                    light="thumbnail.png"
-                  />
-                )}
-              </div>
-            );
-          })}
+              return (
+                <SwiperSlide key={video.id}>
+                  <div className="process-tile" ref={videoRef}>
+                    <h4>{video.title}</h4>
+                    {isIntersecting && (
+                      <ReactPlayer
+                        className="process-video-player"
+                        url={`${video.imgSrc}`}
+                        controls={true}
+                        width={"100%"}
+                        stopOnUnmount={true}
+                        autoplay
+                        volume={0}
+                        light="thumbnail.png"
+                      />
+                    )}
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </section>
