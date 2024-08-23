@@ -41,8 +41,7 @@ const HeroSection2 = () => {
       header: "Specialized ",
       subHeader: "Industries",
       body: "We are specialized in manufacturing of Precision Components for Automobile, Oil & Gas, Marine, Forging, Construction, Pharma Industries",
-    },
-    { id: 5, imgSrc: "/path/to/image5.jpg" },
+    }
   ];
 
   return (
