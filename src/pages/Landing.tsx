@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
+// import HeroSection from "../components/HeroSection";
 import WhatWeDo from "../components/WhatWeDo";
 import AboutSection from "../components/AboutSection";
 import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
-import Clients from "../components/Clients";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ScrollAnimation from "react-animate-on-scroll";
+import HeroSection2 from "../components/HeroSection2";
 
 const Landing = () => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const Landing = () => {
   return (
     <>
       <Navbar />
-      <HeroSection />
+      <HeroSection2 />
       <WhatWeDo />
 
       <ScrollAnimation
@@ -49,16 +49,6 @@ const Landing = () => {
       </ScrollAnimation>
 
       <Portfolio />
-
-      <ScrollAnimation
-        animateIn="slideInUp"
-        duration={1}
-        animateOnce
-        animateOut="slideOutUp"
-      >
-        {" "}
-        <Clients />
-      </ScrollAnimation>
 
       <ScrollAnimation
         animateIn="slideInUp"

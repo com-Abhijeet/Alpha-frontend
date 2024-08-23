@@ -194,16 +194,30 @@ h6 {
 #hero {
   width: 100%;
   height: 60vh;
-  background: url("/hero-img.png") center center;
-  background-size: cover;
   position: relative;
   margin-top: 70px;
   padding: 0;
 }
 
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 #hero:before {
   content: "";
-  background: rgba(56, 64, 70, 0.7);
+  background: rgba(29, 32, 35, 0.7);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -226,6 +240,7 @@ h6 {
 #hero h1 span {
   border-bottom: 4px solid #3498db;
 }
+
 #hero h2 {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 30px;
@@ -245,13 +260,12 @@ h6 {
   background: #3498db;
   text-transform: uppercase;
   text-decoration: none;
-  cursor:pointer  ;
+  cursor: pointer;
 }
 
 #hero .btn-get-started:hover {
   background: #4ea5e0;
 }
-
 
 @media (max-width: 992px) {
   #hero {
@@ -271,7 +285,6 @@ h6 {
     margin-bottom: 30px;
   }
 }
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
