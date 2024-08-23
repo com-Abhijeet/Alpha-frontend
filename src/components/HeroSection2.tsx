@@ -41,7 +41,7 @@ const HeroSection2 = () => {
       header: "Specialized ",
       subHeader: "Industries",
       body: "We are specialized in manufacturing of Precision Components for Automobile, Oil & Gas, Marine, Forging, Construction, Pharma Industries",
-    }
+    },
   ];
 
   return (
@@ -49,7 +49,7 @@ const HeroSection2 = () => {
       modules={[Autoplay, A11y, Navigation, Pagination, Scrollbar]}
       slidesPerView={1}
       autoplay={{
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       pagination={{ clickable: true }}
