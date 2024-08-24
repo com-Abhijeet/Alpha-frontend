@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Enquire from "./Enquire";
 import Process from "./Process";
 import ScrollAnimation from "react-animate-on-scroll";
+import TechnicalSupportEquipment from "./TechnicalSupportEquipment";
 
 const Portfolio: React.FC = () => {
   /*
@@ -184,62 +185,6 @@ const Portfolio: React.FC = () => {
         type: "Products",
       },
     ],
-    "filter-equipments": [
-      {
-        id: 17,
-        imgSrc: "/img/portfolio/equipment1.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 18,
-        imgSrc: "/img/portfolio/equipment2.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 19,
-        imgSrc: "/img/portfolio/equipment3.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 20,
-        imgSrc: "/img/portfolio/equipment4.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 21,
-        imgSrc: "/img/portfolio/equipment5.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 22,
-        imgSrc: "/img/portfolio/equipment6.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 24,
-        imgSrc: "/img/portfolio/equipment7.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 25,
-        imgSrc: "/img/portfolio/equipment8.png",
-        title: "Technical Support Equipment ",
-        type: "Technical Support Equipment",
-      },
-      {
-        id: 23,
-        imgSrc: "/img/portfolio/product13.png",
-        title: "Technical Support Equipment",
-        type: "Technical Support Equipment",
-      },
-    ],
   };
 
   const allItems = useMemo(() => {
@@ -307,21 +252,9 @@ const Portfolio: React.FC = () => {
                   >
                     Products
                   </li>
-                  <li
-                    data-filter=".filter-equipments"
-                    className={
-                      activeFilter === "filter-equipments"
-                        ? "filter-active"
-                        : ""
-                    }
-                    onClick={() => handleFilterClick("filter-equipments")}
-                  >
-                    Technical Support Equipment
-                  </li>
                 </ul>
               </div>
             </div>
-
             <div className="row portfolio-container">
               {filteredItems.map((item) => (
                 <div
@@ -379,8 +312,19 @@ const Portfolio: React.FC = () => {
           animateOut="slideOutUp"
         >
           {""}
+          <TechnicalSupportEquipment />
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          animateIn="slideInUp"
+          duration={1}
+          animateOnce
+          animateOut="slideOutUp"
+        >
+          {""}
           <Process />
         </ScrollAnimation>
+
         {isMobile && showEnquire && <Enquire productName={productName} />}
         {showEnquire && !isMobile && (
           <div className="enquire-overlay">

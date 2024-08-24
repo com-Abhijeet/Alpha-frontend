@@ -611,6 +611,7 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
 #portfolio {
   min-height: calc(150vh - 60px);
   margin: 2% auto;
@@ -785,7 +786,10 @@ section {
   font-size: 14px;
   text-transform: uppercase;
 }
-
+#support-equipments{
+  padding: 60px 0;
+  background: #f7fbfe;
+}
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/

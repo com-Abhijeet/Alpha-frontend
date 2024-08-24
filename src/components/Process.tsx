@@ -27,13 +27,15 @@ const Process = () => {
   } = {
     video1: {
       id: 1,
-      imgSrc: "https://www.youtube.com/embed/YppKBQFIswE?si=_1GTqDzVjLK7roY5?rel=0",
+      imgSrc:
+        "https://www.youtube.com/embed/YppKBQFIswE?rel=0&si=_1GTqDzVjLK7roY5",
       title: "Manufacturing",
       type: "video",
     },
     video2: {
       id: 2,
-      imgSrc: "https://www.youtube.com/embed/ozl4u8viqYM?si=mn9J00YyK4PzhVoy?rel=0",
+      imgSrc:
+        "https://www.youtube.com/embed/ozl4u8viqYM?si=mn9J00YyK4PzhVoy?rel=0",
       title: "Manufacturing",
       type: "video",
     },
