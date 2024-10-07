@@ -24,19 +24,19 @@ const Footer = () => {
                 <h4>Useful Links</h4>
                 <ul>
                   <li>
-                    <i className="bx bx-chevron-right"></i> <a href="#">Home</a>
+                    <i className="bx bx-chevron-right"></i> <a href="/">Home</a>
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#about">About us</a>
+                    <a href="/about">About us</a>
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#services">Services</a>
+                    <a href="/services">Services</a>
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#contact">Contact</a>
+                    <a href="/#contact">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -68,7 +68,7 @@ const Footer = () => {
               <a href="https://pspmerp.in/">PSPM Technologies pvt. ltd.</a>
             </div>
           </div>
-          <div className="social-links text-center text-md-right pt-3 pt-md-0">
+          {/* <div className="social-links text-center text-md-right pt-3 pt-md-0">
             <a href="#" className="twitter">
               <i className="bx bxl-twitter"></i>
             </a>
@@ -84,7 +84,7 @@ const Footer = () => {
             <a href="#" className="linkedin">
               <i className="bx bxl-linkedin"></i>
             </a>
-          </div>
+          </div> */}
         </div>
       </footer>
     </>

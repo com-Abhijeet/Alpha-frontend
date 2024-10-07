@@ -15,10 +15,13 @@
   "dependencies": {
     "@google/model-viewer": "^3.5.0",
     "@react-spring/web": "^9.7.4",
+    "@types/d3-scale": "^4.0.8",
     "alpha-frontend": "file:",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "d3-geo": "^3.1.1",
+    "d3-scale": "^4.0.2",
     "dotenv": "^16.4.5",
     "google-fonts": "^1.0.0",
     "react": "^18.3.1",
@@ -31,7 +34,10 @@
     "react-player": "^2.16.0",
     "react-router-dom": "^6.25.1",
     "react-router-hash-link": "^2.4.3",
+    "react-simple-maps": "^1.0.0",
     "react-toastify": "^10.0.5",
+    "react-tooltip": "^5.28.0",
+    "recharts": "^2.12.7",
     "swiper": "^11.1.9"
   },
   "devDependencies": {
@@ -39,6 +45,7 @@
     "@types/react-animate-on-scroll": "^2.1.8",
     "@types/react-dom": "^18.3.0",
     "@types/react-router-hash-link": "^2.4.9",
+    "@types/react-tooltip": "^3.11.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",

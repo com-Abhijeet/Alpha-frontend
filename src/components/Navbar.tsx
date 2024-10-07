@@ -3,12 +3,18 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
-  const Navigate = useNavigate();
-  const pathname = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [location]);
+
+  const scrollWithOffset = (el: HTMLElement) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -70; // Adjust this value according to your navbar height
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -18,7 +24,7 @@ const Navbar = () => {
             <span>
               <img src="/img/logo.png" alt="" className="img-fluid" />
             </span>
-            <h1 onClick={() => Navigate("/")}>Alpha</h1>
+            <h1 onClick={() => navigate("/")}>Alpha</h1>
           </div>
           <button
             className="navbar-toggler"
@@ -37,46 +43,57 @@ const Navbar = () => {
           >
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <HashLink className="nav-link" aria-current="page" to="/#">
+                <HashLink
+                  smooth
+                  to="/"
+                  scroll={(el) => scrollWithOffset(el)}
+                  className="nav-link"
+                >
                   Home
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink className="nav-link" to="/#about">
+                <HashLink
+                  smooth
+                  to="/about"
+                  scroll={(el) => scrollWithOffset(el)}
+                  className="nav-link"
+                >
                   About
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink className="nav-link" to="/#services">
+                <HashLink
+                  smooth
+                  to="/services"
+                  scroll={(el) => scrollWithOffset(el)}
+                  className="nav-link"
+                >
                   Services
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink className="nav-link" to="/#portfolio">
+                <HashLink
+                  smooth
+                  to="/portfolio"
+                  scroll={(el) => scrollWithOffset(el)}
+                  className="nav-link"
+                >
                   Portfolio
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink className="nav-link" to="/#contact">
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  scroll={(el) => scrollWithOffset(el)}
+                  className="nav-link"
+                >
                   Contact
                 </HashLink>
               </li>
             </ul>
           </div>
-        </div>
-        <div className="header-social-links d-flex align-items-center">
-          <a href="#" className="twitter" title="Twitter">
-            <i className="bi bi-twitter"></i>
-          </a>
-          <a href="#" className="facebook" title="Facebook">
-            <i className="bi bi-facebook"></i>
-          </a>
-          <a href="#" className="instagram" title="Instagram">
-            <i className="bi bi-instagram"></i>
-          </a>
-          <a href="#" className="linkedin" title="Linkedin">
-            <i className="bi bi-linkedin"></i>
-          </a>
         </div>
       </nav>
     </>

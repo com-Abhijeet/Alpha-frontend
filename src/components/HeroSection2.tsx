@@ -11,6 +11,7 @@ import {
   Pagination,
   Scrollbar,
 } from "swiper/modules";
+import Counter from "./Counter";
 
 const HeroSection2 = () => {
   const slides = [
@@ -45,46 +46,51 @@ const HeroSection2 = () => {
   ];
 
   return (
-    <Swiper
-      modules={[Autoplay, A11y, Navigation, Pagination, Scrollbar]}
-      slidesPerView={1}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
-      pagination={{ clickable: true }}
-      loop={true}
-    >
-      {slides.map((slide) => (
-        <SwiperSlide key={slide.id}>
-          <section
-            id="hero"
-            className="d-flex flex-column justify-content-center align-items-center position-relative"
-          >
-            <div className="hero-image-container overlay">
-              <img
-                src={slide.imgSrc}
-                alt={`Slide ${slide.id}`}
-                className="img-fluid w-100 h-100"
-              />
-            </div>
-            <div
-              className="container text-center text-md-left"
-              data-aos="fade-up"
+    <>
+      <Swiper
+        modules={[Autoplay, A11y, Navigation, Pagination, Scrollbar]}
+        slidesPerView={1}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        loop={true}
+      >
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <section
+              id="hero"
+              className="d-flex flex-column justify-content-center align-items-center position-relative"
             >
-              <h1>
-                {slide.header}
-                <span>{slide.subHeader}</span>
-              </h1>
-              <h2>{slide.body}</h2>
-              <a href="/#what-we-do" className="btn-get-started scrollto">
-                Get Started
-              </a>
-            </div>
-          </section>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+              <div className="hero-image-container overlay">
+                <img
+                  src={slide.imgSrc}
+                  alt={`Slide ${slide.id}`}
+                  className="img-fluid w-100 h-100"
+                />
+              </div>
+              <div
+                className="container text-center text-md-left"
+                data-aos="fade-up"
+              >
+                <h1>
+                  {slide.header}
+                  <span>{slide.subHeader}</span>
+                </h1>
+                <h2>{slide.body}</h2>
+                <a href="/#what-we-do" className="btn-get-started scrollto">
+                  Get Started
+                </a>
+              </div>
+            </section>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="counter-container">
+        <Counter />
+      </div>
+    </>
   );
 };
 
