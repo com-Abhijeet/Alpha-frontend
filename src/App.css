@@ -437,7 +437,45 @@ section {
 .what-we-do .row > .col-lg-4:nth-child(even) .icon-box p {
   color: #3498db;
 }
+/*------------------------------------------------------------
+# Specialization Css
+-------------------------------------------------------------*/
+.specialization-machine {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide-image {
+  width: 50%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slide-text {
+  width: 50%;
+}
+
+.slide-text h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.slide-text p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -511,7 +549,6 @@ section {
 #FACILITY TABLE 
 -------------------------------------------------------------*/
 .machine-container {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -532,10 +569,9 @@ section {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 20px;
+  width: 300px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .machine-card:hover {
@@ -552,6 +588,46 @@ section {
   margin: 5px 0;
   font-size: 1rem;
   color: #555;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
 }
 /* -----------------------------------------------------------
 MAP
@@ -631,6 +707,12 @@ MAP
   width: 24px;
   height: 24px;
   margin-right: 10px;
+}
+
+@media (max-width : 990px){
+  .map{
+    visibility: hidden;
+  }
 }
 /*-------------------------------------------------------------
 # PIECHART

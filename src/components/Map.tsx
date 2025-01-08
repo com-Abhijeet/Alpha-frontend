@@ -148,6 +148,7 @@ const Map = () => {
                   {country.country}
                 </li>
               ))}
+              <li>...and more</li>
             </ul>
           </div>
         </div>

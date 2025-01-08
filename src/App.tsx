@@ -12,6 +12,7 @@ import ReactGA from "react-ga4";
 import Portfolio from "./pages/Portfolio";
 import AboutSection from "./pages/AboutSection";
 import Services from "./pages/Services";
+
 ReactGA.initialize("G-LTC9GWLF3P");
 function App() {
   useMuteMedia();

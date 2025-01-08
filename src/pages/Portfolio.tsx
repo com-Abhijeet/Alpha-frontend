@@ -12,7 +12,9 @@ const Portfolio: React.FC = () => {
   /*
   STATE VARIABLES
   */
-  const [activeFilter, setActiveFilter] = useState("*");
+  const [activeFilter, setActiveFilter] = useState(
+    "filter-industrial-machines"
+  );
   const [filteredItems, setFilteredItems] = useState<
     { id: number; imgSrc: string; title: string; type: string }[]
   >([]);
@@ -112,6 +114,42 @@ const Portfolio: React.FC = () => {
         title: "Machine 2",
         type: "Industrial Equipment",
       },
+      {
+        id: 17,
+        imgSrc: "/img/portfolio/tsugami-machine.JPG",
+        title: "Tsugami B0325",
+        type: "Industrial Equipment",
+      },
+      {
+        id: 18,
+        imgSrc: "/img/portfolio/lathe-machine.JPG",
+        title: "Lathe Machine",
+        type: "Industrial Equipment",
+      },
+      {
+        id: 19,
+        imgSrc: "/img/portfolio/t5-machine.JPG",
+        title: "T5 Machine",
+        type: "Industrial Equipment",
+      },
+      {
+        id: 19,
+        imgSrc: "/img/portfolio/lathe-machine2.png",
+        title: "Lathe Machine",
+        type: "Industrial Equipment",
+      },
+      {
+        id: 20,
+        imgSrc: "/img/portfolio/smt-aldell.JPG",
+        title: "SMT Aldell",
+        type: "Industrial Equipment",
+      },
+      {
+        id: 20,
+        imgSrc: "/img/portfolio/singer-machine.JPG",
+        title: "Singer Milling 27",
+        type: "Industrial Equipment",
+      },
     ],
     "filter-products": [
       {
@@ -184,6 +222,18 @@ const Portfolio: React.FC = () => {
         id: 16,
         imgSrc: "/img/portfolio/product12.png",
         title: "Gear",
+        type: "Products",
+      },
+      {
+        id: 21,
+        imgSrc: "/img/portfolio/custom-parts.JPG",
+        title: "Custom Parts",
+        type: "Products",
+      },
+      {
+        id: 22,
+        imgSrc: "/img/portfolio/custom-parts2.JPG",
+        title: "Custom Parts",
         type: "Products",
       },
     ],
@@ -341,7 +391,7 @@ const Portfolio: React.FC = () => {
           </div>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
